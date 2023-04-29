@@ -1,0 +1,185 @@
+import java.util.Set;
+
+class interviewcode{
+    public static int m1(int num){
+        if (num==0){
+            return 1;
+        }else{
+            return num*m1(num-1);
+        }
+    }
+    public static void main(String[] arg){
+        int res=m1(5);
+        System.out.println(res);
+        swapping of two numbers using third variable
+        int x=10;
+        int y=20;
+        int temp=x;
+        x=y;
+        y=temp;
+        System.out.println("after swaping numbers are : " + x);
+
+        // swapping of two numbers without third variable
+        int x=10;
+        int y=20;
+        x=x+y;
+        y=x-y;
+        x=x-y;
+        System.out.println(x);
+
+
+
+        // factorial
+        int n=5;
+        int factorial=1;
+        for(int i=n;i>1;i--){
+            factorial=factorial*i;
+        }
+        System.out.println(factorial);
+
+
+        // fibonnaci series
+        int num=6;
+        int f1=0;
+        int s1=1;
+        int result=f1+s1;
+        int count=0;
+        while(count<num){
+            System.out.println(f1);
+            f1=s1;
+            s1=result;
+            result=f1+s1;
+            count+=1;
+
+
+
+        int num=5;
+        for(int i=0;i<=num;i++){
+        System.out.println(fibo(i));}
+
+
+
+
+        // prime number
+        int number=11;
+        boolean pri=true;
+        for(int i=2;i<number;i++){
+            if(number%i==0){
+                pri=false;
+                break;
+            
+            }
+        }
+        if(pri){
+            System.out.println("it is prime");
+        }else{
+            System.out.println("not prime");
+        }
+
+
+
+
+
+        // palindrom
+        int n=14545;
+        int rev=0;
+        int temp=n;
+        while(temp>0){
+            int digit=temp%10;
+            rev=(rev*10)+digit;
+            temp=temp/10;
+            
+
+        }
+        if(rev==n){
+            System.out.println("palindrom");
+        }else{
+            System.out.println("non palindrom");
+        }
+
+
+        // armstrong number
+        int num=153;
+        int result=0;
+        int temp=num;
+        while(temp>0){
+            int digit=temp%10;
+            result=result+(digit*digit*digit);
+            temp/=10;
+        }
+        System.out.println(result);
+        if(num==result){
+            System.out.println("it is armstrong");
+        }else{
+            System.out.println("not armstrong ");
+        }
+
+        // // find biggest element in array
+        int[] arr={-12,-3,-5};
+        int max=arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        System.out.println(max);
+
+
+        // search element in array
+        int arr[]={11,2,22,33,44,55,110};
+        int ele=110;
+        int position=-1;
+        for ( int i=0;i<arr.length;i++){
+            if(arr[i]==ele){
+                position=i;
+                break;
+                
+                
+            }
+
+        }
+        if (position==-1){
+            System.out.println("element not present");
+        }else{
+            System.out.println(position);
+        }
+        
+        // reverse string 
+        String s="Avinash";
+        String rev="";
+        for (int i=s.length()-1;i>=0;i--){
+            rev+=s.charAt(i);
+        }
+        System.out.println(rev);
+        
+
+        //prime number
+        String s="Avinash";
+        String rev="";
+        for (int i=s.length()-1;i>=0;i--){
+            rev+=s.charAt(i);
+        }
+        System.out.println(rev);
+
+
+
+
+
+        }
+    }   
+    
+
+//     // fibbonaci with recursion
+    public static int fibo(int num){
+        if(num<0){
+            return -1;
+        }
+        else if(num==0 || num==1){
+            return num;
+        }
+        else{
+            return fibo(num-1)+fibo(num-2);
+        }
+    }
+ } 
+    
