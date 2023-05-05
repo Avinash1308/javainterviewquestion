@@ -17,3 +17,39 @@ public class Main {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// another method without function
+
+public class Main {
+  public static void main(String[] arg) {
+    int arr[] = {8, 1, 3, 7, 5, 6, 2, 9};
+
+    // Bubble Sort algorithm to sort the array in descending order
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[i]>arr[j]) { // swap the values if the current value is less than the next value
+          int temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
+
+    // print the sorted array
+    for (int i = 0; i < arr.length; i++) {
+      System.out.print(arr[i] + " ");
+    }
+  }
+}
