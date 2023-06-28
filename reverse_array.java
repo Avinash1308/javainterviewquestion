@@ -38,3 +38,23 @@ public class Main {
     
     
 }
+
+
+
+
+import java.util.Arrays;
+class Main{
+  public static void main(String[] args){
+    int arr[]={1,2,3,4,5,6};
+    int len=arr.length;
+    int reverse_arr[]=new int [len];
+    int start=0;
+    while(start<len){
+      for(int i=len-1;i>=0;i--){
+        reverse_arr[start]=arr[i];
+        start++;
+      }
+    }
+    System.out.println(Arrays.toString(reverse_arr));
+  }
+}
