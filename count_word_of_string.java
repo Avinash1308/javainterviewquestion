@@ -26,3 +26,12 @@ class Main{
     System.out.println(words.length);
   }
 }
+
+
+class main{
+    public static void main(String arg[]){
+        String line="    india has its own    technologies which are  developed by the    ISRO    ";
+        String words[]=line.replaceAll("\\s+"," ").trim().split(" ");
+        System.out.println(words.length);
+    }
+}
